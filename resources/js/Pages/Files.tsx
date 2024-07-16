@@ -1,9 +1,17 @@
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
-import {Head, Link} from '@inertiajs/react';
+import {Head} from '@inertiajs/react';
 import { PageProps } from '@/types';
 
-export default function Files({auth, files}: PageProps) {
+interface IFile {
+    id: number;
+    created_at: string;
+}
 
+interface IFilesProps extends PageProps {
+    files: IFile[];
+}
+
+export default function Files({auth, files}: IFilesProps) {
 
     return (
         <AuthenticatedLayout
@@ -27,9 +35,8 @@ export default function Files({auth, files}: PageProps) {
                 }
             </div>
 
-
         </AuthenticatedLayout>
 
-);
+    );
 
 }

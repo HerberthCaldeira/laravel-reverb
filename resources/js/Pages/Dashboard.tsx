@@ -1,12 +1,18 @@
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import { Head } from '@inertiajs/react';
-import { PageProps } from '@/types';
+import {PageProps, User} from '@/types';
 import axios from "axios";
 import {useEffect} from "react";
+import {PaginatedResponse} from "@/types/laravel/pagination";
 
-export default function Dashboard({ auth, users }: PageProps) {
+interface IDashboardProps extends PageProps {
+    users: PaginatedResponse<User>
+}
+
+export default function Dashboard ({ auth, users }: IDashboardProps) {
 
     useEffect(() => {
+        //@ts-ignore
         const channel = window.Echo.private('my.private.' + auth.user.id)
             .listen('.file.ready', (e: any) => {
                 alert('Download is ready!!')
