@@ -8,6 +8,7 @@
 - Inertiajs
 - Pulse
 - Tailwindcss
+- mysql
 
 ### Getting started
 - Clone this repo
