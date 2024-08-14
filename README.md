@@ -6,7 +6,7 @@
 
 - Websockts (Reverb)
 - Inertiajs
-- Pulse
+- laravel Pulse
 - Tailwindcss
 - mysql
 
