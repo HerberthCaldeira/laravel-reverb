@@ -7,6 +7,7 @@
 - Websockts (Reverb)
 - Inertiajs
 - Pulse
+- Tailwindcss
 
 ### Getting started
 - Clone this repo
